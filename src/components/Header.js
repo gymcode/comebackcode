@@ -3,9 +3,10 @@ import {React, Fragment} from 'react'
 
 function Header({title}) {
     return (
-        <Fragment>
-            <div>{title}</div>
-        </Fragment>
+        <header className={"header"}>
+            <h1>{title}</h1>
+            <button className={"btn"}></button>
+        </header>
     )
 }
 
