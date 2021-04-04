@@ -10,7 +10,7 @@ const math = "yes"
 function App () {
     return (
       <Fragment>
-        <Header/>
+        <Header title={"Tracker Header simplified"}/>
         <h1>hello this is me </h1>
         <div>{name}</div>
         <p>performing calculations = { !math ? "2" : "3" }</p>

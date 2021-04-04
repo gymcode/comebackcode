@@ -1,9 +1,9 @@
 import {React, Fragment} from 'react'
 
-function Header() {
+function Header({title}) {
     return (
         <Fragment>
-            <div>Task Tracker</div>
+            <div>{title}</div>
         </Fragment>
     )
 }
