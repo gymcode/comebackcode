@@ -6,7 +6,7 @@ import Header from "./components/Header";
 function App () {
     return (
       <div className={"container"}>
-        <Header title={"string"}/>
+        <Header title={"Task Tracker manager"}/>
       </div>
     )
 }
