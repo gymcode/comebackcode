@@ -1,9 +1,9 @@
 import {react, Fragment} from 'react'
 
-function Button({text}){
+function Button({text, color }){
     return (
         <Fragment>
-             <button className={"btn"}>{text}</button>
+             <button style={{backgroundColor: color}} className={"btn"}>{text}</button>
         </Fragment>
     )
 }
