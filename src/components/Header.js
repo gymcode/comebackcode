@@ -14,7 +14,6 @@ function Header({title}) {
         <header className={"header"}>
             <h1>{title}</h1>
             <Button onclickBtn={onClickBtn} color={"green"} text={"Add"} />
-            {/* <button onClick={onClickBtn} className={"btn"}>Add</button> */}
         </header>
     )
 }

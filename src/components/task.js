@@ -1,6 +1,6 @@
 import {React, Fragment} from 'react'
 
-const Task = [
+const task = [
     {
         id: 1, 
         text: "Docktors Appointment", 
@@ -24,7 +24,11 @@ const Task = [
 function Task(){
     return (
         <Fragment>
-
+            {task.map((items)=> (
+                <>
+                    <h3>{items.text}</h3>
+                </>
+            ))}
         </Fragment> 
     )
 }
