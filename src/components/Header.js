@@ -1,6 +1,9 @@
 import propTypes from "prop-types";
 import {React, Fragment} from 'react'
 
+// imports 
+import Button from './button'
+
 function Header({title}) {
 
     function onClickBtn(e){
@@ -10,7 +13,8 @@ function Header({title}) {
     return (
         <header className={"header"}>
             <h1>{title}</h1>
-            <button onClick={onClickBtn} className={"btn"}>Add</button>
+            <Button text={"Add"} />
+            {/* <button onClick={onClickBtn} className={"btn"}>Add</button> */}
         </header>
     )
 }
