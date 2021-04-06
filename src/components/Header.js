@@ -13,7 +13,7 @@ function Header({title}) {
     return (
         <header className={"header"}>
             <h1>{title}</h1>
-            <Button color={"green"} text={"Add"} />
+            <Button onclickBtn={onClickBtn} color={"green"} text={"Add"} />
             {/* <button onClick={onClickBtn} className={"btn"}>Add</button> */}
         </header>
     )
