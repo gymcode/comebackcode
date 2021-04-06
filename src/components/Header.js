@@ -10,7 +10,7 @@ function Header({title}) {
     return (
         <header className={"header"}>
             <h1>{title}</h1>
-            <button onClick={onClickBtn(e)} className={"btn"}>Add</button>
+            <button onClick={(e)=>onClickBtn(e)} className={"btn"}>Add</button>
         </header>
     )
 }
