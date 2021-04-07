@@ -1,11 +1,12 @@
-import {React, Fragment} from 'react'
-
+import {React, Fragment, useState} from 'react'
+import {task} from '../array/taskArray'
 
 
 function Task(){
+    const [tasks, setTasks] = useState(task)
     return (
         <Fragment>
-            {task.map((items)=> (
+            {tasks.map((items)=> (
                 <>
                     <h3>{items.text}</h3>
                 </>

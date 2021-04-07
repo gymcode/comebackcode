@@ -18,3 +18,7 @@ const task = [
         reminder: false
     }
 ]
+
+module.exports = {
+    task
+}
