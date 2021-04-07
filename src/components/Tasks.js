@@ -1,3 +1,5 @@
+import {FaTimes} from 'react-icons/fa'
+
 function Tasks ({tname, day}){
     return (
         <div className={"task"}>
