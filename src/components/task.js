@@ -1,14 +1,13 @@
-import {React, Fragment, useState} from 'react'
-import {task} from '../array/taskArray'
+import {React, Fragment} from 'react'
+import Tasks from './Tasks'
 
+function Task({tasks}){
 
-function Task(){
-    const [tasks, setTasks] = useState(task)
     return (
         <Fragment>
             {tasks.map((items)=> (
                 <>
-                    <h3>{items.text}</h3>
+                    <Tasks key={items.key} tname={items.text} day={items.day}/>
                 </>
             ))}
         </Fragment> 
