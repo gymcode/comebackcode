@@ -18,7 +18,10 @@ function App () {
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"}/>
-        <Task tasks={tasks} onDelete={deleteEvent}/>
+        {
+          tasks.length > 0 ?
+          <Task tasks={tasks} onDelete={deleteEvent}/> : <h4>No task avaliable</h4>
+        }
       </div>
     )
 }
