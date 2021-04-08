@@ -1,13 +1,13 @@
 import {React, Fragment} from 'react'
 import Tasks from './Tasks'
 
-function Task({tasks}){
+function Task({tasks, onDelete}){
 
     return (
         <Fragment>
             {tasks.map((items)=> (
                 <>
-                    <Tasks key={items.key} tname={items.text} day={items.day}/>
+                    <Tasks key={items.key} tname={items.text} day={items.day} id={items.id}/>
                 </>
             ))}
         </Fragment> 

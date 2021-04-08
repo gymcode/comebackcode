@@ -9,10 +9,14 @@ function App () {
 
   const [tasks, setTasks] = useState(task)
 
+  function deleteEvent(id){
+      console.log("delete", id)
+  }
+
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"}/>
-        <Task tasks={tasks}/>
+        <Task tasks={tasks} />
       </div>
     )
 }
