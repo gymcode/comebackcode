@@ -15,6 +15,10 @@ function App () {
       setTasks(deletedItem)
   }
 
+  function toggleReminder(){
+    
+  }
+
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"}/>
