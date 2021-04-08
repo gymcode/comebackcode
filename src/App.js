@@ -16,7 +16,7 @@ function App () {
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"}/>
-        <Task tasks={tasks} />
+        <Task tasks={tasks} onDelete={deleteEvent}/>
       </div>
     )
 }
