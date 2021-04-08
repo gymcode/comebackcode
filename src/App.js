@@ -11,6 +11,8 @@ function App () {
 
   function deleteEvent(id){
       console.log("delete", id)
+      const deletedItem = tasks.filter((taskItem)=>  taskItem.id !== id  )
+      setTasks(deletedItem)
   }
 
     return (
