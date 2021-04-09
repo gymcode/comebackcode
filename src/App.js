@@ -9,14 +9,13 @@ function App () {
 
   const [tasks, setTasks] = useState(task)
 
-  function deleteEvent(id){
-      console.log("delete", id)
+  function deleteEvent(id){      
       const deletedItem = tasks.filter((taskItem)=>  taskItem.id !== id  )
       setTasks(deletedItem)
   }
 
-  function toggleReminder(){
-    
+  function toggleReminder(id){
+    console.log(id)
   }
 
     return (
@@ -24,7 +23,7 @@ function App () {
         <Header title={"Task Tracker manager"}/>
         {
           tasks.length > 0 ?
-          <Task tasks={tasks} onDelete={deleteEvent}/> : <h4>No task avaliable</h4>
+          <Task tasks={tasks} toggleClass={toggleReminder} onDelete={deleteEvent}/> : <h4>No task avaliable</h4>
         }
       </div>
     )
