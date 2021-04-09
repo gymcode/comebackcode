@@ -16,7 +16,8 @@ function App () {
 
   function toggleReminder(id){
     console.log(id)
-    const toggleItem = tasks.map((taskItem)=>{ taskItem.id !== id})
+    const toggleItem = tasks.map((taskItem)=> taskItem.id !== id )
+    console.log(toggleItem)
   }
 
     return (
