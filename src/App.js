@@ -18,6 +18,7 @@ function App () {
     console.log(id)
     const toggleItem = tasks.map((taskItem)=> taskItem.id !== id )
     console.log(toggleItem)
+    console.log("it misutb")
   }
 
     return (
