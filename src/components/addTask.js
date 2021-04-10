@@ -14,8 +14,10 @@ function AddTask(){
                 </div>
                 <div className={"form-control"}>
                     <label>Reminder</label>
-                    <input type={"boolean"} placeholder={"reminder"}/>
+                    <input type={"checkbox"}/>
                 </div>
+
+                <input type="submit" value=""/>
             </form>
         </Fragment>
     )
