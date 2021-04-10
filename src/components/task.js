@@ -7,7 +7,7 @@ function Task({tasks, onDelete, toggleClass}){
         <Fragment>
             {tasks.map((items)=> (
                 <>
-                    <Tasks key={items.key} tname={items.text} day={items.day} id={items.id} onDelete={onDelete} toggleId={toggleClass}/>
+                    <Tasks key={items.key} tname={items.text} day={items.day} id={items.id} reminder={items.reminder} onDelete={onDelete} toggleId={toggleClass}/>
                 </>
             ))}
         </Fragment> 
