@@ -13,7 +13,7 @@ function AddTask(){
                     <input type={"text"} placeholder={"Add Day & Time"}/>
                 </div>
                 <div className={"form-control"}>
-                    <label>Task</label>
+                    <label><Reminder/label>
                     <input type={"text"} placeholder={"Add Task"}/>
                 </div>
             </form>
