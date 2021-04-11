@@ -21,7 +21,9 @@ function App () {
     console.log(tasks)
   }
 
-  function 
+  function addTaskItem(task){
+
+  }
 
     return (
       <div className={"container"}>
