@@ -3,6 +3,7 @@ import { React, useState } from "react";
 // components import 
 import Header from "./components/Header";
 import Task from "./components/task"
+import AddTask from "./components/addTask"
 import {task} from './array/taskArray'
 
 function App () {
@@ -23,6 +24,7 @@ function App () {
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"}/>
+        <AddTask/>
         {
           tasks.length > 0 ?
           <Task tasks={tasks} toggleClass={toggleReminder} onDelete={deleteEvent}/> : <h4>No task avaliable</h4>

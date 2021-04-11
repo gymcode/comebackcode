@@ -12,12 +12,12 @@ function AddTask(){
                     <label>Day & time</label>
                     <input type={"text"} placeholder={"Add Day & Time"}/>
                 </div>
-                <div className={"form-control"}>
+                <div className={"form-control form-control-check"}>
                     <label>Reminder</label>
-                    <input type={"checkbox"}/>
+                    <input type={"checkbox"} />
                 </div>
 
-                <input type="submit" value=""/>
+                <input type="submit" className={"btn btn-block"} value="save task "/>
             </form>
         </Fragment>
     )
