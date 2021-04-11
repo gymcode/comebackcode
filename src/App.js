@@ -21,6 +21,8 @@ function App () {
     console.log(tasks)
   }
 
+  function 
+
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"}/>

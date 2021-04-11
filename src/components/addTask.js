@@ -15,11 +15,11 @@ function AddTask(){
                 </div>
                 <div className={"form-control"}>
                     <label>Day & time</label>
-                    <input type={"text"} value={text} onChange={ (e) => setDay(e.target.value) } placeholder={"Add Day & Time"}/>
+                    <input type={"text"} value={day} onChange={ (e) => setDay(e.target.value) } placeholder={"Add Day & Time"}/>
                 </div>
                 <div className={"form-control form-control-check"}>
                     <label>Reminder</label>
-                    <input type={"checkbox"} />
+                    <input type={"checkbox"} value={reminder} onChange={(e)=>{console.log(e.currentTarget.checked)}}/>
                 </div>
 
                 <input type="submit" className={"btn btn-block"} value="save task "/>
