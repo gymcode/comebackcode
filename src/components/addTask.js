@@ -1,6 +1,6 @@
 import {Fragment, useState} from 'react'
 
-function AddTask(){
+function AddTask({onAdd}){
 
     const [text, setText] = useState()
     const [day, setDay] = useState()
@@ -9,8 +9,7 @@ function AddTask(){
     function onsubmit(e){
         e.preventDefault()
 
-        console.log(e)
-        console.log(text, day, reminder)
+       onAdd({text, day, reminder})
     }
 
     return (

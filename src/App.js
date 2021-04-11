@@ -18,11 +18,11 @@ function App () {
   function toggleReminder(id){
     const toggleItem = tasks.map((taskItem)=> taskItem.id === id ? {...taskItem, reminder: !taskItem.reminder} : taskItem)
     setTasks(toggleItem)
-    console.log(tasks)
+    
   }
 
   function addTaskItem(task){
-
+      console.log(task)
   }
 
     return (
@@ -31,7 +31,7 @@ function App () {
         <AddTask/>
         {
           tasks.length > 0 ?
-          <Task tasks={tasks} toggleClass={toggleReminder} onDelete={deleteEvent}/> : <h4>No task avaliable</h4>
+          <Task tasks={tasks} toggleClass={toggleReminder} onDelete={deleteEvent} onAdd={addTaskItem} /> : <h4>No task avaliable</h4>
         }
       </div>
     )
