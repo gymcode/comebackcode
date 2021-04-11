@@ -6,13 +6,16 @@ function AddTask(){
     const [day, setDay] = useState()
     const [reminder, setReminder] = useState()
 
-    function onsubmit(){
+    function onsubmit(e){
+        e.preventDefault()
 
+        console.log(e)
+        console.log(text, day, reminder)
     }
 
     return (
         <Fragment>
-            <form className={"add-form"} onSubmit={}> 
+            <form className={"add-form"} onSubmit={onsubmit}> 
                 <div className={"form-control"}>
                     <label>Task</label>
                     <input type={"text"} value={text} onChange={ (e) => setText(e.target.value) } placeholder={"Add Task"}/>
