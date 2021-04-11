@@ -28,10 +28,10 @@ function App () {
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"}/>
-        <AddTask/>
+        <AddTask onAdd={addTaskItem}/>
         {
           tasks.length > 0 ?
-          <Task tasks={tasks} toggleClass={toggleReminder} onDelete={deleteEvent} onAdd={addTaskItem} /> : <h4>No task avaliable</h4>
+          <Task tasks={tasks} toggleClass={toggleReminder}  onDelete={deleteEvent} /> : <h4>No task avaliable</h4>
         }
       </div>
     )
