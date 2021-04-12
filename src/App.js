@@ -26,7 +26,7 @@ function App () {
     const id = Math.random()
     
     const newTask = {id, ...task}
-    
+    setTasks({...tasks, newTask})
   }
 
     return (
