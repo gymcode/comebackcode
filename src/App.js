@@ -22,7 +22,8 @@ function App () {
   }
 
   function addTaskItem(task){      
-    
+    // creating id
+    setTasks({...tasks})
   }
 
     return (
