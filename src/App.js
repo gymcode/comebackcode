@@ -21,8 +21,8 @@ function App () {
     
   }
 
-  function addTaskItem(task){
-      console.log(task)
+  function addTaskItem(task){      
+    
   }
 
     return (
