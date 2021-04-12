@@ -27,9 +27,9 @@ function App () {
     
     const newTask = {id, ...task}
     setTasks({...tasks, newTask})
-    console.log(tasks)
-  }
-
+    
+  }ccczxcg
+it 
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"}/>
