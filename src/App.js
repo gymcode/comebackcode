@@ -35,7 +35,7 @@ function App () {
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"} onClickBtn={()=>{setShowForm(!showForm)}}/>
-        <AddTask onAdd={addTaskItem}/>
+        { showForm ? <><AddTask onAdd={addTaskItem}/></> : "hey there" }
         {
           tasks.length > 0 ?
           <Task tasks={tasks} toggleClass={toggleReminder}  onDelete={deleteEvent} /> : <h4>No task avaliable</h4>
