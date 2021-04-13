@@ -32,10 +32,6 @@ function App () {
     
   }
 
-  function onshowForm(){
-    console.log("shoe me someting")
-  }
-
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"} onClickBtn={()=>{setShowForm(!showForm)}}/>
