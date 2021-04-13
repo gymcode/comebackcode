@@ -4,11 +4,8 @@ import {React, Fragment} from 'react'
 // imports 
 import Button from './button'
 
-function Header({title}) {
+function Header({title, onClickBtn}) {
 
-    function onClickBtn(e){
-        console.log(e)
-    }
 
     return (
         <header className={"header"}>

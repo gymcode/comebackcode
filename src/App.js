@@ -33,12 +33,12 @@ function App () {
   }
 
   function onshowForm(){
-
+    console.log("shoe me someting")
   }
-  
+
     return (
       <div className={"container"}>
-        <Header title={"Task Tracker manager"}/>
+        <Header title={"Task Tracker manager"} onClickBtn={onshowForm}/>
         <AddTask onAdd={addTaskItem}/>
         {
           tasks.length > 0 ?
