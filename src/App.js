@@ -23,11 +23,9 @@ function App () {
 
   function addTaskItem(task){      
     // creating id
-    const id = Math.random()
+    const id = Math.floor(Math.random() * 1000) + 1
     
     const newTask = {id, ...task}
-    console.log(newTask)
-    console.log(tasks)
 
     setTasks([...tasks, newTask])
     
