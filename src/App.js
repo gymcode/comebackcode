@@ -9,6 +9,7 @@ import {task} from './array/taskArray'
 function App () {
 
   const [tasks, setTasks] = useState(task)
+  const [showForm, setShowForm] = useState(false)
 
   function deleteEvent(id){      
       const deletedItem = tasks.filter((taskItem)=>  taskItem.id !== id  )
@@ -30,6 +31,11 @@ function App () {
     setTasks([...tasks, newTask])
     
   }
+
+  function onshowForm(){
+
+  }
+  
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"}/>
