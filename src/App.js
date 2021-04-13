@@ -26,10 +26,12 @@ function App () {
     const id = Math.random()
     
     const newTask = {id, ...task}
-    setTasks({...tasks, newTask})
+    console.log(newTask)
+    console.log(tasks)
+
+    setTasks([...tasks, newTask])
     
-  }ccczxcg
-it 
+  }
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"}/>
