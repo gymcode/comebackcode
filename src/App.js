@@ -18,6 +18,9 @@ function App () {
 
       console.log(data)
      }
+
+     fetchData()
+     
   }, [])
 
   function deleteEvent(id){      
