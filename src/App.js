@@ -9,7 +9,6 @@ import {task} from './array/taskArray'
 function App () {
 
   const [tasks, setTasks] = useState(task)
-  const [text, setText] = useState("Add")
   const [showForm, setShowForm] = useState(false)
 
   function deleteEvent(id){      
@@ -35,7 +34,7 @@ function App () {
 
     return (
       <div className={"container"}>
-        <Header title={"Task Tracker manager"} btnText={showForm ? text : setText("Close") } onClickBtn={()=>{setShowForm(!showForm)}}/>
+        <Header title={"Task Tracker manager"} showStatus={showForm} onClickBtn={()=>{setShowForm(!showForm)}}/>
         { showForm ? <><AddTask onAdd={addTaskItem}/></> : "" }
         {
           tasks.length > 0 ?
