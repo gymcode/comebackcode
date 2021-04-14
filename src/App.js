@@ -11,7 +11,14 @@ function App () {
   const [tasks, setTasks] = useState(task)
   const [showForm, setShowForm] = useState(false)
 
-  useEffect(())
+  useEffect(()=>{
+     const fetchData = async ()=>{
+      const response = await fetch("http://localhost:5000/tasks")
+      const data = response.json()
+
+      console.log(data)
+     }
+  }, [])
 
   function deleteEvent(id){      
       const deletedItem = tasks.filter((taskItem)=>  taskItem.id !== id  )
