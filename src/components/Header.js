@@ -10,7 +10,7 @@ function Header({title, onClickBtn, showStatus}) {
     return (
         <header className={"header"}>
             <h1>{title}</h1>
-            <Button onclickBtn={onClickBtn} color={"green"} text={showStatus ? "Close" : "Add"} />
+            <Button onclickBtn={onClickBtn} color={ showStatus ? "red" : "green"} text={showStatus ? "Close" : "Add"} />
         </header>
     )
 }
