@@ -35,7 +35,7 @@ function App () {
 
     return (
       <div className={"container"}>
-        <Header title={"Task Tracker manager"} btnText={()=> {} } onClickBtn={()=>{setShowForm(!showForm)}}/>
+        <Header title={"Task Tracker manager"} btnText={showForm ? text : setText("Close") } onClickBtn={()=>{setShowForm(!showForm)}}/>
         { showForm ? <><AddTask onAdd={addTaskItem}/></> : "" }
         {
           tasks.length > 0 ?
