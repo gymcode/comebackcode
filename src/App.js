@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 
 // components import 
 import Header from "./components/Header";
@@ -10,6 +10,8 @@ function App () {
 
   const [tasks, setTasks] = useState(task)
   const [showForm, setShowForm] = useState(false)
+
+  useEffect(())
 
   function deleteEvent(id){      
       const deletedItem = tasks.filter((taskItem)=>  taskItem.id !== id  )
