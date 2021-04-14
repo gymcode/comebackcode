@@ -4,13 +4,13 @@ import {React, Fragment} from 'react'
 // imports 
 import Button from './button'
 
-function Header({title, onClickBtn}) {
+function Header({title, onClickBtn, btnText}) {
 
 
     return (
         <header className={"header"}>
             <h1>{title}</h1>
-            <Button onclickBtn={onClickBtn} color={"green"} text={"Add"} />
+            <Button onclickBtn={onClickBtn} color={"green"} text={btnText} />
         </header>
     )
 }

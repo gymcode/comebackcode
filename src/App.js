@@ -9,6 +9,7 @@ import {task} from './array/taskArray'
 function App () {
 
   const [tasks, setTasks] = useState(task)
+  const [test, setText] = useState("Add")
   const [showForm, setShowForm] = useState(false)
 
   function deleteEvent(id){      
@@ -32,10 +33,14 @@ function App () {
     
   }
 
+  function changeText(text){
+    
+  }
+
     return (
       <div className={"container"}>
         <Header title={"Task Tracker manager"} onClickBtn={()=>{setShowForm(!showForm)}}/>
-        { showForm ? <><AddTask onAdd={addTaskItem}/></> : "hey there" }
+        { showForm ? <><AddTask onAdd={addTaskItem}/></> : "" }
         {
           tasks.length > 0 ?
           <Task tasks={tasks} toggleClass={toggleReminder}  onDelete={deleteEvent} /> : <h4>No task avaliable</h4>
