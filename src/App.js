@@ -4,6 +4,7 @@ import { React, useState, useEffect } from "react";
 import Header from "./components/Header";
 import Task from "./components/task"
 import AddTask from "./components/addTask"
+import Footer from "./components/footer";
 
 function App () {
 
@@ -96,6 +97,7 @@ function App () {
           tasks.length > 0 ?
           <Task tasks={tasks} toggleClass={toggleReminder}  onDelete={deleteEvent} /> : <h4>No task avaliable</h4>
         }
+        <Footer/>
       </div>
     )
 }
