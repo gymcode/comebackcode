@@ -4,7 +4,6 @@ import { React, useState, useEffect } from "react";
 import Header from "./components/Header";
 import Task from "./components/task"
 import AddTask from "./components/addTask"
-import {task} from './array/taskArray'
 
 function App () {
 
