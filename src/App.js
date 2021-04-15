@@ -43,13 +43,11 @@ function App () {
     
   }
 
-  function addTaskItem(task){      
-    // creating id
-    const id = Math.floor(Math.random() * 1000) + 1
-    
-    const newTask = {id, ...task}
-
-    setTasks([...tasks, newTask])
+  async function addTaskItem(task){      
+    const res = await fetch("http://localhost:5000/tasks", {
+      method: "POST", 
+      headers: ""
+    })
     
   }
 
