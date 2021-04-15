@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Task from "./components/task"
 import AddTask from "./components/addTask"
 import Footer from "./components/footer";
+import About from "./components/About";
 
 function App () {
 
