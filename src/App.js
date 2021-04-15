@@ -59,10 +59,10 @@ function App () {
       body: JSON.stringify(updateTask)
     })
 
-    const data = res.json()
+    const data = await res.json()
     console.log(data)
 
-    const toggleItem = tasks.map((taskItem)=> taskItem.id === id ? {...taskItem, reminder: !taskItem.reminder} : taskItem)
+    const toggleItem = tasks.map((taskItem)=> taskItem.id === id ? {...taskItem, reminder: !data.reminder} : taskItem)
     setTasks(toggleItem)
     
   }
