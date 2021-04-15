@@ -37,7 +37,20 @@ function App () {
       setTasks(deletedItem)
   }
 
-  function toggleReminder(id){
+  async function getSingleTask(id) {
+    const getTask = await fetch(`http://localhost:5000/tasks/${id}`)
+    const response = await getTask.json()
+
+    return response
+  }
+
+  async function toggleReminder(id){
+
+    const taskToToggle = await getSingleTask(id)
+
+    const updateTask = 
+    console.log(taskToToggle)
+
     const toggleItem = tasks.map((taskItem)=> taskItem.id === id ? {...taskItem, reminder: !taskItem.reminder} : taskItem)
     setTasks(toggleItem)
     
