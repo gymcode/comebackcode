@@ -8,20 +8,24 @@ import {task} from './array/taskArray'
 
 function App () {
 
-  const [tasks, setTasks] = useState(task)
+  const [tasks, setTasks] = useState([])
   const [showForm, setShowForm] = useState(false)
 
   useEffect(()=>{
-     const fetchData = async ()=>{
-      const response = await fetch("http://localhost:5000/tasks")
-      const data = response.json()
-
-      console.log(data)
-     }
-
-     fetchData()
-     
+    const getTask = async () =>{
+      const taskFromServer = await fetchTask();
+      console.log(taskFromServer)
+      setTasks(taskFromServer)
+    }
   }, [])
+
+  async function fetchTask (){
+    const response = await fetch(' http://localhost:5000/tasks')
+    const data = await response.json()
+
+    console.log(data)
+    return data
+  }
 
   function deleteEvent(id){      
       const deletedItem = tasks.filter((taskItem)=>  taskItem.id !== id  )
