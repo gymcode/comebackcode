@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, Fragment } from "react";
 import { BrowserRouter as Router, Route} from "react-router-dom"
 
 // components import 
@@ -92,7 +92,7 @@ function Home () {
   }
 
   return (
-        <div className={"container"}>
+        <Fragment>
           <Header title={"Task Tracker manager"} showStatus={showForm} onClickBtn={()=>{setShowForm(!showForm)}}/>
           { showForm ? <><AddTask onAdd={addTaskItem}/></> : "" }
           {
@@ -100,7 +100,7 @@ function Home () {
             <Task tasks={tasks} toggleClass={toggleReminder}  onDelete={deleteEvent} /> : <h4>No task avaliable</h4>
           }
           <Footer/>
-        </div>
+        </Fragment>
   )
 
 }
@@ -108,7 +108,12 @@ function Home () {
 function App () {
 
     return (
-      <Home/>
+      <Router>
+        <div className={"container"}>
+          <Route path={'/'} component={Home} exact/>
+          <Route path={'/about'} component={About}/>
+        </div>
+      </Router>
     )
 }
 
