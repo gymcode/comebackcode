@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import { BrowserRouter as Router, Route} from "react-router-dom"
 
 // components import 
 import Header from "./components/Header";
@@ -7,7 +8,7 @@ import AddTask from "./components/addTask"
 import Footer from "./components/footer";
 import About from "./components/About";
 
-function App () {
+function Home () {
 
   const [tasks, setTasks] = useState([])
   const [showForm, setShowForm] = useState(false)
@@ -90,16 +91,24 @@ function App () {
     
   }
 
+  return (
+        <div className={"container"}>
+          <Header title={"Task Tracker manager"} showStatus={showForm} onClickBtn={()=>{setShowForm(!showForm)}}/>
+          { showForm ? <><AddTask onAdd={addTaskItem}/></> : "" }
+          {
+            tasks.length > 0 ?
+            <Task tasks={tasks} toggleClass={toggleReminder}  onDelete={deleteEvent} /> : <h4>No task avaliable</h4>
+          }
+          <Footer/>
+        </div>
+  )
+
+}
+
+function App () {
+
     return (
-      <div className={"container"}>
-        <Header title={"Task Tracker manager"} showStatus={showForm} onClickBtn={()=>{setShowForm(!showForm)}}/>
-        { showForm ? <><AddTask onAdd={addTaskItem}/></> : "" }
-        {
-          tasks.length > 0 ?
-          <Task tasks={tasks} toggleClass={toggleReminder}  onDelete={deleteEvent} /> : <h4>No task avaliable</h4>
-        }
-        <Footer/>
-      </div>
+      <Home/>
     )
 }
 

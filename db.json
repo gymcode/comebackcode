@@ -17,6 +17,12 @@
       "day": "time is money",
       "reminder": true,
       "id": 3
+    },
+    {
+      "text": "dsad",
+      "day": "da",
+      "reminder": true,
+      "id": 4
     }
   ]
 }
