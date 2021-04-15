@@ -14,20 +14,25 @@ function App () {
   useEffect(()=>{
     const getTask = async () =>{
       const taskFromServer = await fetchTask();
-      console.log(taskFromServer)
+
       setTasks(taskFromServer)
     }
+
+    getTask()
   }, [])
 
   async function fetchTask (){
-    const response = await fetch(' http://localhost:5000/tasks')
+    const response = await fetch('http://localhost:5000/tasks')
     const data = await response.json()
 
-    console.log(data)
     return data
   }
 
-  function deleteEvent(id){      
+  async function deleteEvent(id){  
+      await fetch(`http://localhost:5000/tasks/${id}`, {
+        "method": "DELETE"
+      })
+    
       const deletedItem = tasks.filter((taskItem)=>  taskItem.id !== id  )
       setTasks(deletedItem)
   }
